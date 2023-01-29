@@ -1,0 +1,25 @@
+{
+  "name": "ipp5-adlibitum-esm-loader",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "e53e04ac",
+  "homepage": "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e53e04ac/ipp5-adlibitum-esm-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/issues"
+  },
+  "type": "module",
+  "types": "./index.d.ts",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  }
+}
