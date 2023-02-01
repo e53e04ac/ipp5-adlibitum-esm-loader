@@ -201,10 +201,10 @@ const constructor = ((options) => {
 
 });
 
-/** @type {import('./').Ipp5AdlibitumEsmLoader.Companion} */
+/** @type {import('.').Ipp5AdlibitumEsmLoader.Companion} */
 const companion = ({});
 
-/** @type {import('./').Ipp5AdlibitumEsmLoader.ConstructorWithCompanion} */
+/** @type {import('.').Ipp5AdlibitumEsmLoader.ConstructorWithCompanion} */
 const constructorWithCompanion = Object.assign(constructor, companion);
 
 export { constructorWithCompanion as Ipp5AdlibitumEsmLoader };
