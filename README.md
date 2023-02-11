@@ -5,14 +5,13 @@ npm install e53e04ac/ipp5-adlibitum-esm-loader
 ~~~~~
 
 ~~~~~ mjs
-import { Ipp5AdlibitumEsmLoader } from 'e53e04ac/ipp5-adlibitum-esm-loader';
+import { type Ipp5AdlibitumEsmLoader } from 'e53e04ac/ipp5-adlibitum-esm-loader';
+import { const Ipp5AdlibitumEsmLoader } from 'e53e04ac/ipp5-adlibitum-esm-loader';
 ~~~~~
 
 ~~~~~ mermaid
 graph RL;
   A(["package.json"]);
-  subgraph "dependencies";
-  end;
   subgraph "devDependencies";
     B_0(["@types/node"]);
   end;
@@ -21,11 +20,21 @@ graph RL;
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  A(["index.mjs"])
+graph RL;
+  subgraph "e53e04ac/ipp5-adlibitum-esm-loader";
+    E_0(["Ipp5AdlibitumEsmLoader"]);
+  end;
+  M(["index.mjs"])
+  E_0 ----> M;
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  A(["index.d.ts"])
+graph RL;
+  subgraph "e53e04ac/ipp5-adlibitum-esm-loader";
+    E_0(["type Ipp5AdlibitumEsmLoader"]);
+    E_1(["const Ipp5AdlibitumEsmLoader"]);
+  end;
+  M(["index.d.ts"])
+  E_0 ----> M;
+  E_1 ----> M;
 ~~~~~
