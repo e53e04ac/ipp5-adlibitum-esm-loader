@@ -30,10 +30,12 @@ graph RL;
 ~~~~~ mermaid
 graph RL;
   subgraph "e53e04ac/ipp5-adlibitum-esm-loader";
-    E_0(["type Ipp5AdlibitumEsmLoader"]);
-    E_1(["const Ipp5AdlibitumEsmLoader"]);
+    E_0(["namespace Ipp5AdlibitumEsmLoader"]);
+    E_1(["type Ipp5AdlibitumEsmLoader"]);
+    E_2(["const Ipp5AdlibitumEsmLoader"]);
   end;
   M(["index.d.ts"])
   E_0 ----> M;
   E_1 ----> M;
+  E_2 ----> M;
 ~~~~~
