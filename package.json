@@ -23,8 +23,11 @@
     "node": ">=18.14.0",
     "npm": ">=9.3.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "event-emitter": "github:e53e04ac/event-emitter"
+  },
   "devDependencies": {
-    "@types/node": "^18.11.19"
+    "@types/node": "^18.11.19",
+    "hold": "github:e53e04ac/hold"
   }
 }

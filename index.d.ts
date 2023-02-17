@@ -4,9 +4,12 @@
     MIT License
 */
 
+import { EventEmitter } from 'event-emitter';
+import { Get } from 'hold';
+
 export declare namespace Ipp5AdlibitumEsmLoader {
 
-    type Get<T> = { (): T; };
+    type EventSpecs = Record<never, never>;
 
     type Block = {
         readonly type: 'import' | 'export' | 'other';
@@ -45,7 +48,11 @@ export declare namespace Ipp5AdlibitumEsmLoader {
         readonly defineCallback: DefineCallback;
     };
 
-    type Options = Record<never, never>;
+    type Options = {
+        readonly eval: {
+            (f: string): Promise<unknown>;
+        };
+    };
 
     type _Self = {
         readonly options: Get<Options>;
@@ -73,7 +80,7 @@ export declare namespace Ipp5AdlibitumEsmLoader {
         };
     };
 
-    type Self = {
+    type Self = EventEmitter<EventSpecs> & {
         readonly _Ipp5AdlibitumEsmLoader: Get<_Self>;
         readonly loadFromCode: {
             (params: {

@@ -4,10 +4,14 @@
     MIT License
 */
 
+import { EventEmitter } from 'event-emitter';
+
 /** @type {import('.').Ipp5AdlibitumEsmLoader.Constructor} */
 const constructor = ((options) => {
 
-    const _options = ({});
+    const _options = ({
+        eval: options.eval,
+    });
 
     /** @type {import('.').Ipp5AdlibitumEsmLoader._Self} */
     const _self = ({
@@ -174,6 +178,7 @@ const constructor = ((options) => {
 
     /** @type {import('.').Ipp5AdlibitumEsmLoader.Self} */
     const self = ({
+        ...EventEmitter({}),
         _Ipp5AdlibitumEsmLoader: (() => {
             return _self;
         }),
@@ -188,7 +193,8 @@ const constructor = ((options) => {
                 importFunctionName: '__import__',
                 lineDelimiter: '\r\n',
             });
-            const defineCallback = eval(defineCallbackCode);
+            /** @type {any} */
+            const defineCallback = _options.eval(defineCallbackCode);
             return {
                 blocks,
                 defineCallbackCode,
