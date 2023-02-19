@@ -9,8 +9,6 @@ import { Get } from 'hold';
 
 export declare namespace Ipp5AdlibitumEsmLoader {
 
-    type EventSpecs = Record<never, never>;
-
     type Block = {
         readonly type: 'import' | 'export' | 'other';
         readonly substring: string;
@@ -53,6 +51,8 @@ export declare namespace Ipp5AdlibitumEsmLoader {
             (f: string): Promise<unknown>;
         };
     };
+
+    type EventSpecs = Record<never, never>;
 
     type _Self = {
         readonly options: Get<Options>;
